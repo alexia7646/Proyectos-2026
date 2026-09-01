@@ -1,0 +1,125 @@
+@property --arena{
+    syntax:"<color>";
+    inherits:true;
+    initial-value: #32a852;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'segoe UI', Tahoma, Geneva;
+}
+
+nav{
+    background-color: var(--arena);
+    padding: 30px;
+    text-align: center;
+}
+
+.navbar-item{
+    color: white;
+    text-decoration: none;
+    margin-right: 90px;
+}
+
+.navbar-item:hover{
+    color:aquamarine; 
+    font-size:larger;
+}
+
+header{
+    background-image: url(img/images\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+    color: aliceblue;
+}
+
+h1{
+    color: blue;
+}
+p{
+    color: aliceblue;
+}
+
+
+header>div{
+    padding: 300px 300px 300px 100px;
+}
+
+.button{
+    padding: 5px;
+    background-color: #32a852;
+    color: aliceblue;
+    display: inline-block;
+    margin: 10px 0 10px;
+}
+
+.button:hover{
+    background-color: aliceblue;
+    color: #32a852;
+    cursor: pointer;
+}
+
+#lugar1{
+    background-color: rgb(29, 152, 103);
+    text-align: center;
+}
+
+#cafeteria{
+    height: 400px;
+    
+}
+h2{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+section, footer{
+    padding:40px;
+}
+
+#tabla1{
+    padding-left: 100px;
+
+}
+
+#lugar2{
+    text-align: center;
+    
+}
+
+#lugar2 table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#p2{
+    color: #32a852;
+    margin-bottom: 10px;
+}
+
+#lugar2 td,th{
+    padding: 10px;
+}
+
+#lugar2 th{
+    background-color: aquamarine;
+}
+
+#lugar2 td{
+    border-bottom:2px dotted #32a852;
+}
+
+footer{
+    background-color: black;
+    color: aqua;
+}
+
+#contacto{
+    text-align: right;
+}
+
+footer table{
+    width: 100%;
+}

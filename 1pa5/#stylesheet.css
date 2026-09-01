@@ -1,0 +1,26 @@
+#stylesheet.css
+@property --arena{
+    syntax:"<color>";
+    inherits:true;
+    initial-value: #32a852;
+}
+
+<--!asterisco es para seleccionar todo -->
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'segoe UI', Tahoma, Geneva;
+}
+
+nav{
+    background-color: var(--arena);
+    padding: 30px;
+    text-align: center;
+}
+
+.navbar-item{
+    color: brown;
+    text-decoration: none;
+}
