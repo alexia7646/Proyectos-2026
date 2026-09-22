@@ -1,0 +1,186 @@
+.container div {
+  border: 2px solid #333;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 400px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-around;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+#item1 { order: 7; }
+#item2 { order: 6; }
+#item3 { order: 5; }
+#item4 { order: 4; }
+#item5 { order: 3; }
+#item6 { order: 2; }
+#item7 { order: 1; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.container div {
+  border: 2px solid #333;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+#item1 { flex-grow: 1; }
+#item2 { flex-grow: 2; }
+#item3 { flex-grow: 1; }
+#item4 { flex-grow: 3; }
+#item5 { flex-grow: 1; }
+#item6 { flex-grow: 4; }
+#item7 { flex-grow: 1; }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 400px;
+  align-items: center;
+}
+
+.container div {
+  border: 2px solid #333;
+  width: 80px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f0f0f0;
+}
+
+#item4 {
+  align-self: flex-start;
+}
