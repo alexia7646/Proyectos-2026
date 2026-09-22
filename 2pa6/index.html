@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Grid - Plantillas</title>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 40px;
+  }
+
+  hr {
+    margin: 40px 0;
+  }
+
+  .grid {
+    display: grid;
+    gap: 5px;
+  }
+
+  .caja {
+    background-color: #6c5ce7;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .caja2 { background-color: #00b894; }
+  .caja3 { background-color: #0984e3; }
+  .caja4 { background-color: #fdcb6e; color: black; }
+  .caja5 { background-color: #e17055; }
+  .caja6 { background-color: #d63031; }
+
+  /* 1 columna */
+  .g-1col {
+    grid-template-columns: 1fr;
+  }
+
+  /* 2 columnas */
+  .g-2col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* 3 columnas */
+  .g-3col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* 4 columnas */
+  .g-4col {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /* 2 filas */
+  .g-2row {
+    grid-template-rows: 1fr 1fr;
+  }
+
+  /* 3 filas */
+  .g-3row {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  /* 4 filas */
+  .g-4row {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  /* 5 filas */
+  .g-5row {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  /* 6 filas */
+  .g-6row {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  /* large grid */
+  .g-large {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .g-large .grande {
+    grid-row: 1 / 3;
+  }
+
+  /* small grid */
+  .g-small {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /* mosaicos */
+  .g-mosaic1 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .g-mosaic1 .item1 {
+    grid-column: span 2;
+  }
+
+  .g-mosaic2 {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .g-mosaic2 .item1 {
+    grid-row: span 2;
+  }
+
+  .g-mosaic3 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .g-mosaic3 .item5 {
+    grid-column: span 3;
+  }
+
+  .g-mosaic4 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .g-mosaic4 .item1 {
+    grid-row: span 2;
+  }
+  .g-mosaic4 .item3 {
+    grid-row: span 2;
+  }
+
+  .g-mosaic5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .g-mosaic5 .itemA {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  .g-mosaic5 .itemB {
+    grid-column: 3 / 5;
+  }
+  .g-mosaic5 .itemC {
+    grid-row: 2 / 4;
+  }
+  .g-mosaic5 .itemD {
+    grid-row: 2 / 4;
+  }
+  .g-mosaic5 .itemE {
+    grid-column: 1 / 3;
+  }
+
+  .g-mosaic6 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .g-mosaic6 .item1 {
+    grid-row: span 2;
+  }
+  .g-mosaic6 .item2 {
+    grid-column: span 2;
+  }
+
+  .g-mosaic7 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .g-mosaic7 .item5 {
+    grid-column: span 2;
+  }
+  .g-mosaic7 .item6 {
+    grid-column: span 2;
+  }
+
+  .g-mosaic8 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .g-mosaic8 .item2 {
+    grid-row: span 2;
+  }
+  .g-mosaic8 .item6 {
+    grid-column: 1 / 4;
+  }
+
+  </style>
+</head>
+<body>
+
+  <h1>Plantillas de CSS Grid</h1>
+
+  <h2>1 columna</h2>
+  <div class="grid g-1col">
+    <div class="caja">1</div>
+  </div>
+
+  <hr>
+  <h2>2 columnas</h2>
+  <div class="grid g-2col">
+    <div class="caja">1</div>
+    <div class="caja caja2">2</div>
+  </div>
+
+<hr>
+  <h2>3 columnas</h2>
+  <div class="grid g-3col">
+    <div class="caja">1</div>
+    <div class="caja caja2">2</div>
+    <div class="caja caja3">3</div>
+  </div>
+
+<hr>
+  <h2>4 columnas</h2>
+  <div class="grid g-4col">
+    <div class="caja">1</div>
+    <div class="caja caja2">2</div>
+    <div class="caja caja3">3</div>
+    <div class="caja caja4">4</div>
+  </div>
+
+<hr>
+  <h2>2 filas</h2>
+  <div class="grid g-2row">
+    <div class="caja">1</div>
+    <div class="caja caja2">2</div>
+  </div>
+
+<hr>
+  <h2>3 filas</h2>
+  <div class="grid g-3row">
+    <div class="caja">1</div>
+    <div class="caja caja2">2</div>
+    <div class="caja caja3">3</div>
+  </div>
+
+<hr>
+<h2>4 filas</h2>
+<div class="grid g-4row">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+</div>
+
+<hr>
+<h2>5 filas</h2>
+<div class="grid g-5row">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5">5</div>
+</div>
+
+<hr>
+<h2>6 filas</h2>
+<div class="grid g-6row">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5">5</div>
+  <div class="caja caja6">6</div>
+</div>
+
+<hr>
+<h2>Large grid</h2>
+<div class="grid g-large">
+  <div class="caja grande">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+</div>
+
+<hr>
+<h2>Small grid</h2>
+<div class="grid g-small">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5">5</div>
+  <div class="caja caja6">6</div>
+  <div class="caja">7</div>
+  <div class="caja caja2">8</div>
+</div>
+
+<hr>
+<h2>Mosaic 1</h2>
+<div class="grid g-mosaic1">
+  <div class="caja item1">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+</div>
+
+<hr>
+<h2>Mosaic 2</h2>
+<div class="grid g-mosaic2">
+  <div class="caja item1">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5">5</div>
+</div>
+
+<hr>
+<h2>Mosaic 3</h2>
+<div class="grid g-mosaic3">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5 item5">5</div>
+</div>
+
+<hr>
+<h2>Mosaic 4</h2>
+<div class="grid g-mosaic4">
+  <div class="caja item1">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3 item3">3</div>
+  <div class="caja caja4">4</div>
+</div>
+
+<hr>
+<h2>Mosaic 5</h2>
+<div class="grid g-mosaic5">
+  <div class="caja itemA">A</div>
+  <div class="caja caja2 itemB">B</div>
+  <div class="caja caja3 itemC">C</div>
+  <div class="caja caja4 itemD">D</div>
+  <div class="caja caja5 itemE">E</div>
+</div>
+
+<hr>
+<h2>Mosaic 6</h2>
+<div class="grid g-mosaic6">
+  <div class="caja item1">1</div>
+  <div class="caja caja2 item2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+</div>
+
+<hr>
+<h2>Mosaic 7</h2>
+<div class="grid g-mosaic7">
+  <div class="caja">1</div>
+  <div class="caja caja2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5 item5">5</div>
+  <div class="caja caja6 item6">6</div>
+</div>
+
+<hr>
+<h2>Mosaic 8</h2>
+<div class="grid g-mosaic8">
+  <div class="caja">1</div>
+  <div class="caja caja2 item2">2</div>
+  <div class="caja caja3">3</div>
+  <div class="caja caja4">4</div>
+  <div class="caja caja5">5</div>
+  <div class="caja caja6 item6">6</div>
+</div>
+
+</body>
+</html>
