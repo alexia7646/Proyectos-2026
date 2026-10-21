@@ -1,0 +1,18 @@
+nav{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: beige;
+    color: black;
+    padding: 20px;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+}
+
+
+
