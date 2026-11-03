@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | ARDOL</title>
+    <meta name="description" content="Revisa las piezas de tu carrito en ARDOL, carpintería fina.">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navegacion">
+
+            <a class="titulo" href="index.html">ARDOL</a>
+
+            <div id="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Sillas</a>
+                <a href="#">Mesas</a>
+                <a href="#">Escritorios</a>
+                <a href="#">Camas</a>
+                <a href="#">Nuestra historia</a>
+            </div>
+
+            <div class="icons">
+                <a href="#"><img src="lupa.png" alt="Buscar"></a>
+                <a href="#"><img src="corazon.png" alt="Favoritos"></a>
+                <a href="#"><img src="carro-de-la-compra.png" alt="Carrito"></a>
+                <a href="#"><img src="usuario.png" alt="Usuario"></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ENCABEZADO DE LA PÁGINA -->
+        <section class="carrito-encabezado">
+            <p class="etiqueta">ARDOL · CARPINTERÍA FINA</p>
+            <h1>Tu carrito</h1>
+            <p id="resumen-cantidad">0 piezas</p>
+        </section>
+
+        <!-- CONTENIDO DEL CARRITO -->
+        <section class="carrito">
+
+            <!-- Lista de productos -->
+            <div class="lista" id="lista">
+
+                <article class="item" data-precio="2450">
+                    <img src="silla.jpg" alt="Silla de madera">
+                    <div class="item-info">
+                        <h3>Silla Roble</h3>
+                        <p class="detalle">Madera de roble · Acabado natural</p>
+                        <button class="quitar" type="button">Quitar</button>
+                    </div>
+                    <div class="cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">2</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+                    <p class="item-total">$4,900</p>
+                </article>
+
+                <article class="item" data-precio="8900">
+                    <img src="comedor-moderna-mesa-comedor-natural-ravello_com89438k1-dc-f-p_2.jpg" alt="Mesa de madera">
+                    <div class="item-info">
+                        <h3>Mesa Nogal</h3>
+                        <p class="detalle">Madera de nogal · 160 cm</p>
+                        <button class="quitar" type="button">Quitar</button>
+                    </div>
+                    <div class="cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">1</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+                    <p class="item-total">$8,900</p>
+                </article>
+
+                <article class="item" data-precio="12500">
+                    <img src="cama.jpg" alt="Cama de madera">
+                    <div class="item-info">
+                        <h3>Cama Cedro</h3>
+                        <p class="detalle">Madera de cedro · Matrimonial</p>
+                        <button class="quitar" type="button">Quitar</button>
+                    </div>
+                    <div class="cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">1</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+                    <p class="item-total">$12,500</p>
+                </article>
+
+                <!-- Mensaje cuando no hay productos -->
+                <div class="vacio" id="vacio" hidden>
+                    <h2>Tu carrito está vacío</h2>
+                    <p>Descubre piezas hechas con intención y diseñadas para durar.</p>
+                    <a href="#" class="enlace-oscuro">EXPLORAR PRODUCTOS →</a>
+                </div>
+
+            </div>
+
+            <!-- Resumen del pedido -->
+            <aside class="resumen" id="resumen">
+
+                <p class="etiqueta">RESUMEN DEL PEDIDO</p>
+
+                <div class="fila">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0</span>
+                </div>
+
+                <div class="fila">
+                    <span>Envío</span>
+                    <span>Se calcula al finalizar</span>
+                </div>
+
+                <div class="fila total">
+                    <span>Total</span>
+                    <span id="total">$0</span>
+                </div>
+
+                <button type="button" class="boton-verde">FINALIZAR COMPRA</button>
+
+                <a href="#" class="seguir">← Seguir explorando</a>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <h3>Horario</h3>
+                    <p>Lunes-Domingo, 7am-9pm</p>
+                    <p>Todos los días</p>
+                </td>
+                <td id="contacto">
+                    <h3>Contacto</h3>
+                    <p>Nainari, Nuevo León #173, Cd. Obregón, Son</p>
+                    <p>Tel. (644) 233 0606</p>
+                </td>
+            </tr>
+        </table>
+    </footer>
+
+
+    <script>
+        const lista = document.getElementById("lista");
+        const formato = n => "$" + n.toLocaleString("es-MX");
+
+        function actualizar() {
+            let piezas = 0;
+            let subtotal = 0;
+            const items = lista.querySelectorAll(".item");
+
+            items.forEach(item => {
+                const precio = Number(item.dataset.precio);
+                const cant = Number(item.querySelector(".num").textContent);
+                item.querySelector(".item-total").textContent = formato(precio * cant);
+                piezas += cant;
+                subtotal += precio * cant;
+            });
+
+            document.getElementById("resumen-cantidad").textContent =
+                piezas + (piezas === 1 ? " pieza" : " piezas");
+            document.getElementById("subtotal").textContent = formato(subtotal);
+            document.getElementById("total").textContent = formato(subtotal);
+
+            const hayItems = items.length > 0;
+            document.getElementById("vacio").hidden = hayItems;
+            document.getElementById("resumen").hidden = !hayItems;
+        }
+
+        lista.addEventListener("click", e => {
+            const item = e.target.closest(".item");
+            if (!item) return;
+            const num = item.querySelector(".num");
+
+            if (e.target.classList.contains("mas")) {
+                num.textContent = Number(num.textContent) + 1;
+            } else if (e.target.classList.contains("menos")) {
+                num.textContent = Math.max(1, Number(num.textContent) - 1);
+            } else if (e.target.classList.contains("quitar")) {
+                item.remove();
+            }
+            actualizar();
+        });
+
+        actualizar();
+    </script>
+
+</body>
+
+</html>
