@@ -1,0 +1,517 @@
+/* ===== ESTILOS GENERALES ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Padding de toda la página: todo el contenido queda con margen alrededor */
+body {
+    margin: 0;
+    padding: clamp(20px, 4vw, 60px);
+    background-color: beige;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.etiqueta {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin: 0 0 18px;
+}
+
+.der {
+    text-align: right;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ===== BARRA SUPERIOR: título + menú + íconos en una sola línea ===== */
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d0b0;
+}
+
+.titulo {
+    color: black;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+#menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: color .2s ease;
+}
+
+#menu a:hover {
+    color: #536747;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icons img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+
+/* ===== TÍTULO ===== */
+
+.pedido-titulo {
+    text-align: center;
+    padding: 60px 0 50px;
+}
+
+.pedido-titulo h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+/* ===== TABLA DEL PEDIDO ===== */
+
+.pedido {
+    padding-bottom: 80px;
+}
+
+.cabecera-tabla,
+.item {
+    display: grid;
+    grid-template-columns: 1fr 140px 150px 140px;
+    gap: 20px;
+    align-items: start;
+}
+
+.cabecera-tabla {
+    padding: 0 0 18px;
+    border-bottom: 1px solid #c9c0a0;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.item {
+    padding: 35px 0;
+    border-bottom: 1px solid #d8d0b0;
+}
+
+.item-producto {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Foto pequeña: 40px */
+.item-producto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.item-info h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+
+.atributo {
+    margin: 0;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nota {
+    margin: 18px 0 20px;
+    max-width: 520px;
+    font-size: 10px;
+    color: #555;
+}
+
+.nota a {
+    color: #222;
+    border-bottom: 1px solid #222;
+    text-decoration: none;
+}
+
+.nota a:hover {
+    color: #536747;
+    border-color: #536747;
+}
+
+.quitar {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0 0 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+}
+
+.quitar:hover {
+    color: #536747;
+    border-color: #536747;
+}
+
+.precio,
+.item-total {
+    margin: 0;
+    padding-top: 8px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+
+
+
+.cantidad {
+    display: inline-flex;
+    align-items: center;
+    align-self: start;
+    justify-self: start;
+    background-color: white;
+    border: 1px solid #d8d0b0;
+}
+
+.cantidad button {
+    width: 42px;
+    height: 46px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.cantidad button:hover {
+    color: #536747;
+}
+
+.num {
+    min-width: 34px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+.resumen {
+    max-width: 380px;
+    margin: 40px 0 0 auto;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+}
+
+.envio {
+    margin: 6px 0 25px;
+    font-size: 13px;
+    color: #555;
+}
+
+.boton-verde {
+    width: 100%;
+    padding: 18px;
+    background-color: #536747;
+    color: white;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.boton-verde:hover {
+    background-color: #3f5035;
+}
+
+.seguir {
+    display: block;
+    margin-top: 22px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.seguir:hover {
+    color: #536747;
+}
+
+
+/* ===== PEDIDO VACÍO ===== */
+
+.vacio {
+    text-align: center;
+    padding: 20px 0 80px;
+}
+
+.vacio h2 {
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.vacio p {
+    margin: 0 0 25px;
+}
+
+.enlace-oscuro {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.enlace-oscuro:hover {
+    color: #536747;
+    border-color: #536747;
+}
+
+
+/* ===== PIE DE PÁGINA ===== */
+
+.pie {
+    background: linear-gradient(180deg, #1c1c1c 0%, #000 100%);
+    color: beige;
+    padding: 70px 5% 30px;
+}
+
+.pie-contenido {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.4fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+.pie-logo {
+    display: inline-block;
+    color: beige;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 34px;
+    letter-spacing: 7px;
+}
+
+.pie-marca p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a8a28a;
+}
+
+
+.pie-columna h3 {
+    margin: 0 0 22px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.pie-columna ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pie-columna li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.pie-columna li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #7f9a6e;
+}
+
+.pie-columna a {
+    color: beige;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.pie-columna a:hover {
+    color: #9bb58a;
+}
+
+
+.dato {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 0 0 22px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dato svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: #7f9a6e;
+    margin-top: 1px;
+}
+
+.pie-derechos {
+    margin: 50px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #8f8a76;
+    text-align: center;
+}
+
+
+
+/* ===== ADAPTACIÓN A CELULARES ===== */
+
+@media (max-width: 900px) {
+
+    /* Fila 1: título a la izquierda + íconos a la derecha. Fila 2: menú. */
+    .barra {
+        flex-wrap: wrap;
+        gap: 14px 20px;
+    }
+
+    .titulo {
+        font-size: 28px;
+    }
+
+    .icons {
+        order: 2;
+    }
+
+    #menu {
+        order: 3;
+        width: 100%;
+        gap: 18px;
+    }
+
+    .pedido-titulo {
+        padding: 40px 0 35px;
+    }
+
+    .pedido-titulo h1 {
+        font-size: 42px;
+    }
+
+    .cabecera-tabla {
+        display: none;
+    }
+
+    .item {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px 15px;
+    }
+
+    .item-producto {
+        grid-column: 1 / -1;
+    }
+
+    .precio,
+    .item-total {
+        font-size: 22px;
+    }
+
+    .precio {
+        grid-column: 1 / -1;
+        padding-top: 0;
+    }
+
+    .precio::before,
+    .item-total::before {
+        content: attr(data-label);
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #555;
+        margin-bottom: 4px;
+    }
+
+    .resumen {
+        max-width: none;
+    }
+
+    footer table,
+    footer tr,
+    footer td {
+        display: block;
+        text-align: left;
+    }
+
+    #contacto {
+        text-align: left;
+        margin-top: 20px;
+    }
+}
