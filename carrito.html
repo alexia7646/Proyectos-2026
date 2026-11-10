@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu pedido | ARDOL</title>
+    <meta name="description" content="Revisa las piezas de tu pedido en ARDOL, carpintería fina.">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="barra">
+
+            <a class="titulo" href="carrito.html">ARDOL</a>
+
+            <div id="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Sillas</a>
+                <a href="#">Mesas</a>
+                <a href="#">Escritorios</a>
+                <a href="#">Camas</a>
+                <a href="#">Nuestra historia</a>
+            </div>
+
+            <div class="icons">
+                <a href="#"><img src="lupa.png" alt="Buscar"></a>
+                <a href="#"><img src="corazon.png" alt="Favoritos"></a>
+                <a href="#"><img src="carro-de-la-compra.png" alt="Carrito"></a>
+                <a href="#"><img src="usuario.png" alt="Usuario"></a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="pedido-titulo">
+            <p class="etiqueta">ARDOL · CARPINTERÍA FINA</p>
+            <h1>Tu pedido</h1>
+        </section>
+
+        <!-- TABLA DEL PEDIDO -->
+        <section class="pedido" id="pedido">
+
+            <div class="cabecera-tabla">
+                <span>Producto</span>
+                <span>Precio</span>
+                <span>Cantidad</span>
+                <span class="der">Total</span>
+            </div>
+
+            <div id="lista">
+
+                <article class="item" data-precio="2450">
+                    <div class="item-producto">
+                        <img src="silla.jpg" alt="Silla de roble">
+                        <div class="item-info">
+                            <h3>Silla Roble</h3>
+                            <p class="atributo">Madera: roble</p>
+                            <p class="atributo">Asiento: madera</p>
+                            <p class="atributo">Acabado: natural</p>
+                            <p class="nota">
+                                Nuestras piezas se fabrican por encargo; el tiempo de elaboración actual
+                                es de 6 semanas. Para dudas sobre fechas de entrega,
+                                <a href="#">contáctanos</a>.
+                            </p>
+                            <button class="quitar" type="button">Quitar</button>
+                        </div>
+                    </div>
+
+                    <p class="precio" data-label="Precio">$2,450</p>
+
+                    <div class="cantidad" data-label="Cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">2</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+
+                    <p class="item-total der" data-label="Total">$4,900</p>
+                </article>
+
+                <article class="item" data-precio="8900">
+                    <div class="item-producto">
+                        <img src="comedor-moderna-mesa-comedor-natural-ravello_com89438k1-dc-f-p_2.jpg" alt="Mesa de nogal">
+                        <div class="item-info">
+                            <h3>Mesa Nogal</h3>
+                            <p class="atributo">Madera: nogal</p>
+                            <p class="atributo">Largo: 160 cm</p>
+                            <p class="atributo">Acabado: natural</p>
+                            <p class="nota">
+                                Nuestras piezas se fabrican por encargo; el tiempo de elaboración actual
+                                es de 6 semanas. Para dudas sobre fechas de entrega,
+                                <a href="#">contáctanos</a>.
+                            </p>
+                            <button class="quitar" type="button">Quitar</button>
+                        </div>
+                    </div>
+
+                    <p class="precio" data-label="Precio">$8,900</p>
+
+                    <div class="cantidad" data-label="Cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">1</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+
+                    <p class="item-total der" data-label="Total">$8,900</p>
+                </article>
+
+                <article class="item" data-precio="12500">
+                    <div class="item-producto">
+                        <img src="cama.jpg" alt="Cama de cedro">
+                        <div class="item-info">
+                            <h3>Cama Cedro</h3>
+                            <p class="atributo">Madera: cedro</p>
+                            <p class="atributo">Tamaño: matrimonial</p>
+                            <p class="atributo">Acabado: natural</p>
+                            <p class="nota">
+                                Nuestras piezas se fabrican por encargo; el tiempo de elaboración actual
+                                es de 6 semanas. Para dudas sobre fechas de entrega,
+                                <a href="#">contáctanos</a>.
+                            </p>
+                            <button class="quitar" type="button">Quitar</button>
+                        </div>
+                    </div>
+
+                    <p class="precio" data-label="Precio">$12,500</p>
+
+                    <div class="cantidad" data-label="Cantidad">
+                        <button type="button" class="menos" aria-label="Quitar una">−</button>
+                        <span class="num">1</span>
+                        <button type="button" class="mas" aria-label="Agregar una">+</button>
+                    </div>
+
+                    <p class="item-total der" data-label="Total">$12,500</p>
+                </article>
+
+            </div>
+
+            <div class="resumen">
+                <div class="fila">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0</span>
+                </div>
+                <p class="envio">El envío se calcula al finalizar la compra.</p>
+
+                <button type="button" class="boton-verde">FINALIZAR COMPRA</button>
+                <a href="index.html" class="seguir">← Seguir explorando</a>
+            </div>
+
+        </section>
+
+        <section class="vacio" id="vacio" hidden>
+            <h2>Tu pedido está vacío</h2>
+            <p>Descubre piezas hechas con intención y diseñadas para durar.</p>
+            <a href="index.html" class="enlace-oscuro">EXPLORAR PRODUCTOS →</a>
+        </section>
+
+    </main>
+
+
+     <footer class="pie">
+
+        <div class="pie-contenido">
+
+            <!-- Marca -->
+            <div class="pie-marca">
+                <a href="index.html" class="pie-logo">ARDOL</a>
+                <p>Carpintería fina</p>
+            </div>
+
+            <!-- Menú -->
+            <div class="pie-columna">
+                <h3>Menú</h3>
+                <ul>
+                    <li><a href="productos.html">Sillas</a></li>
+                    <li><a href="#">Mesas</a></li>
+                    <li><a href="#">Escritorios</a></li>
+                    <li><a href="#">Camas</a></li>
+                    <li><a href="historia.html">Nuestra historia</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Horario</h3>
+                <ul>
+                    <li>Lunes a domingo</li>
+                    <li>7:00 am - 9:00 pm</li>
+                    <li>Todos los días</li>
+                </ul>
+            </div>
+            <div class="pie-columna pie-contacto">
+                <h3>Contacto</h3>
+
+                <p class="dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                    </svg>
+                    <span>Nainari, Nuevo León #173<br>Cd. Obregón, Sonora</span>
+                </p>
+
+                <p class="dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/>
+                    </svg>
+                    <a href="tel:+526442330606">(644) 233 0606</a>
+                </p>
+
+                <p class="dato">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.2-8 5-8-5V6l8 5 8-5z"/>
+                    </svg>
+                    <a href="mailto:hola@ardol.com">hola@ardol.com</a>
+                </p>
+            </div>
+
+        </div>
+
+        <p class="pie-derechos">© 2026 ARDOL · Carpintería fina</p>
+
+    </footer>
+
+
+    <script>
+        const lista = document.getElementById("lista");
+        const formato = n => "$" + n.toLocaleString("es-MX");
+
+        function actualizar() {
+            let subtotal = 0;
+            const items = lista.querySelectorAll(".item");
+
+            items.forEach(item => {
+                const precio = Number(item.dataset.precio);
+                const cant = Number(item.querySelector(".num").textContent);
+                item.querySelector(".item-total").textContent = formato(precio * cant);
+                subtotal += precio * cant;
+            });
+
+            document.getElementById("subtotal").textContent = formato(subtotal);
+
+            const hayItems = items.length > 0;
+            document.getElementById("pedido").hidden = !hayItems;
+            document.getElementById("vacio").hidden = hayItems;
+        }
+
+        lista.addEventListener("click", e => {
+            const item = e.target.closest(".item");
+            if (!item) return;
+            const num = item.querySelector(".num");
+
+            if (e.target.classList.contains("mas")) {
+                num.textContent = Number(num.textContent) + 1;
+            } else if (e.target.classList.contains("menos")) {
+                num.textContent = Math.max(1, Number(num.textContent) - 1);
+            } else if (e.target.classList.contains("quitar")) {
+                item.remove();
+            }
+            actualizar();
+        });
+
+        actualizar();
+    </script>
+
+</body>
+
+</html>
